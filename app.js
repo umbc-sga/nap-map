@@ -1,4 +1,7 @@
 var NAP_LOCATIONS = {
+    "Admin": [
+       
+    ],
     "Apartment Community Center": [
         {
             "location": "Rec Room",
@@ -15,21 +18,78 @@ var NAP_LOCATIONS = {
             "closingTime": "24 hours"
         }
     ],
+    "Biological Sciences": [
+       
+    ],
     "Commons": [
-	
+	    {
+	        "location": "OCSS",
+	        "noiseLevel": "Loud",
+	        "spacesAvailable": "24 Couches",
+	        "closingTime": "Midnight"
+	    }
+    ],
+    "DHall": [
+       
+    ],
+    "Engineering": [
+       
+    ],
+    "Fine Arts": [
+       
     ],
     "ITE": [
-	
+	    {
+	        "location": "2nd Floor",
+	        "directions": "across from stairwell",
+	        "noiseLevel": "Medium - Quiet",
+	        "spacesAvailable": "8 Comfortable Chairs",
+	        "closingTime": "Midnight"
+	    }
+    ],
+    "Math & Psychology": [
+       
+    ],
+    "Meyerhoff": [
+       
     ],
     "PAHB": [
-	
+	    {
+	        "location": "Lobby",
+	        "noiseLevel": "Loud - Quiet",
+	        "spacesAvailale": "8 Benches",
+	        "closingTime": "24 hours"
+	    }
+    ],
+    "Physics": [
+       
     ],
     "PUP": [
-	
+	    {
+	        "location": "2nd Floor Couches",
+	        "noiseLevel": "Medium - Quiet",
+	        "spacesAvailable": "5 Couches",
+	        "closingTime": "Midnight"
+	    }
+    ],
+    "RAC": [
+       
     ],
     "Sherman": [
-	
-    ]
+	    {
+	        "location": "International Media Center",
+	        "directions": "B-Wing, across from Room 219"
+	        "noiseLevel": "Quiet",
+	        "spacesAvailable": "5 Couches",
+	        "closingTime": "Midnight"
+	    }
+    ],
+    "Sondheim": [
+       
+    ],
+    "University Center": [
+       
+    ],
 };
 
 $("area").on("click", function(e) {
