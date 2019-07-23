@@ -71,5 +71,8 @@ $('img[usemap]').maphilight();
 
 // Activate image map responsivneness
 $(document).ready(function() {
-    $('map').imageMapResize();
+	$('map').imageMapResize();
+	
+	// Hide the instructions after three seconds
+	setTimeout(function() { $(".alert").hide(); }, 3000);
 });
