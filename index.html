@@ -6,11 +6,21 @@
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
 		<style>
-			body { font-family: sans-serif; }
+			html, body {
+				overflow: auto;
+				font-family: sans-serif;
+			}
+			/* .drawer--right.drawer-open .drawer-hamburger {
+				right: 22.25rem;
+			}
+			.drawer-nav {
+				width: 22.25rem;
+			} */
 			ul h3 { margin-top: 0px; text-align: center; }
 			ul li.locationItem {
 				margin-left: 15px;
 				margin-right: 15px;
+				margin-bottom: 10px;
 				border: 1px solid gray;
 				border-radius: 5px;
 				padding: 10px;
@@ -20,18 +30,28 @@
 				top: 0; 
 				left: 0; 
 
-				/* Preserve aspet ratio */
+				/* Preserve aspect ratio */
 				min-width: 100%;
 				min-height: 100%;
 			}
-			.alert { color: #0c5460; background-color: #d1ecf1; border-color: #bee5eb; position: relative; padding: .75rem 1.25rem; margin-bottom: 1rem; border: 1px solid transparent; border-radius: .25rem; width: 100%;}
+			.alert { 
+				z-index: 1; 
+				color: #004085; 
+				background-color: #cce5ff; 
+				border-color: #b8daff; 
+				position: absolute; 
+				padding: .75rem 1.25rem; 
+				margin: auto;
+				border: 1px solid transparent; border-radius: .25rem; width: 90%;
+			}
+			.alert a { color: #004085; text-decoration: none; margin-right: .75em; }
 		</style>
 	</head>
 
 	<body class="drawer drawer--right">
 		<div class="alert">
-    			<a onclick="$('.alert').hide();" href="javascript:void(0);">&times;</button>
-    			<strong>Welcome!</strong> To use this app just click on any building (except Residential Halls) to see if it has any good nap spots.
+    		<a onclick="$('.alert').hide();" href="javascript:void(0);">&times;</a>
+    		<strong>Welcome!</strong> To use this app just click on any building (except Residential Halls) to see if it has any good nap spots.
 		</div>
 		
 		<header role="banner">

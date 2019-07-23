@@ -78,7 +78,7 @@ var NAP_LOCATIONS = {
     "Sherman": [
 	    {
 	        "location": "International Media Center",
-	        "directions": "B-Wing, across from Room 219"
+	        "directions": "B-Wing, across from Room 219",
 	        "noiseLevel": "Quiet",
 	        "spacesAvailable": "5 Couches",
 	        "closingTime": "Midnight"
@@ -104,16 +104,21 @@ $("area").on("click", function(e) {
   
     // Add building name to drawer
     $(".drawer-menu").append("<h3>" + building + "</h3>");
-  
+
+    if (NAP_LOCATIONS[building].length === 0)  {
+        $(".drawer-menu").append("<li class='locationItem'>No spots have been noted...yet.</li>");
+        $(".drawer-menu").append("<li class='locationItem'>Email <a href='mailto:sga@umbc.edu'>sga@umbc.edu</a> if you know of a good spot.</li>");
+    }
+        
     // Go through every single nap location in bulding
     for (var obj of NAP_LOCATIONS[building]) {
         // Create location list element
         var el = document.createElement("li");
         el.className = "locationItem";
-        el.innerHTML = obj.location + "<br>";
-        el.innerHTML += obj.noiseLevel + "<br>";
-        el.innerHTML += obj.spacesAvailable+ "<br>";
-        el.innerHTML += obj.closingTime + "<br>";
+        el.innerHTML = "<b>Location: </b>" +obj.location + "<br>";
+        el.innerHTML += "<b>Noise: </b>" + obj.noiseLevel + "<br>";
+        el.innerHTML += "<b>Spaces: </b>" +obj.spacesAvailable+ "<br>";
+        el.innerHTML += "<b>Open Until: </b>" + obj.closingTime + "<br>";
 	
         // Add location to drawer
         $(".drawer-menu").append(el);
@@ -134,5 +139,5 @@ $(document).ready(function() {
 	$('map').imageMapResize();
 	
 	// Hide the instructions after three seconds
-	setTimeout(function() { $(".alert").hide(); }, 3000);
+	setTimeout(function() { $(".alert").hide(); }, 2000);
 });
